@@ -22,3 +22,25 @@ statements and appear as a syscall as one string
 A Quick Excercise here to indicate issues with escape characters, namely that 
 \c will not be compiled as it the compile detects is as an escape character, 
 however, \\c would be work find to print \c
+
+## 1.3 Write a Table over the Farenheit to Celcius Table 
+Here we use Printf to print before the while loop, and then with some special 
+formatting with | input | input | following by a print line of --------
+we can make a table. 
+
+## 1.4 Write the same table but as Celcius to Farenheit
+This is again quite simple, with the main change being the switch in equation.
+With a little algrebra we can express 
+
+C = (5.0/9.0) + (F - 32) 
+F = C / (5.0/9.0) + 32
+
+And then switching the table info from 1.3
+
+## 1.5 Reverse temperature conversion 300 degress to 0
+I reuse the original code block from 1.3 which uses the F to C conversion and 
+swap the start and stop variables names start and min (demarcating the decrement).
+Finally, the decrement here is expressed with the -= operator once the calculation 
+is made.
+
+
