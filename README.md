@@ -43,4 +43,53 @@ swap the start and stop variables names start and min (demarcating the decrement
 Finally, the decrement here is expressed with the -= operator once the calculation 
 is made.
 
+## 1.6 Verifying that getchar() != EOF is a 0 or 1 output
+Interestingly enough a boolean value is represented by 0 or 1, 
+the tricky part can be if a programmer does not seperate their function call 
+from their boolean expression. As such the following code 
 
+while(c = getchar() != EOF) {
+    // logic here 
+}
+
+Will result in c being a 1 for all input as the boolean expression result is 
+captured not the char and the expression returns false so long as we are not 
+at the end of file (EOF)
+
+Testing the variable with the char j
+c = getchar() != EOF gives 
+Verifying c is 0 or 1: 1
+
+And c = getchar()
+Verifying c1 is not 0 or 1: 10
+
+## 1.7 Write a program to print the value of EOF
+EOF is a part of the standard library and can defined as a Symbolic Constant.
+
+https://man7.org/linux/man-pages/man3/EOF.3const.html
+
+The program in 1.7 uses the description that the EOF is there is an error returns 
+and int to print out the value of EOF, as such the result in code prints 
+EOF == -1
+
+## 1.8 Count blanks tabs and newlines
+Sort of evolving from the EOF chapter we can now compare char's to their ASCII
+counterparts, '\n' == newline, '\t' == tab, 32 == space to count within a series 
+of chars the amount of times we see them. 
+
+This program uses the getchar() method to do just that, and output's to the user 
+after termination of the loop with cntrl-D.
+
+
+## 1.9 Copy I/O to make extra blanks be gone
+This one was a bit tricky at first, but only because my poor syntax.
+In the while loop, you want to putchar to c whenever the following conditions 
+occur. 
+
+1. The space counter is not > 1 and we encounter a space
+2. The char is not related to space 
+
+That way the copied char returned will skip over spaces and return a copy of 
+the char without extra spaces, but not getting rid of all spaces.
+
+## 1.10 Copy its input output replaceing tab backspace with \\t and \\b
