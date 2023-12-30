@@ -93,3 +93,23 @@ That way the copied char returned will skip over spaces and return a copy of
 the char without extra spaces, but not getting rid of all spaces.
 
 ## 1.10 Copy its input output replaceing tab backspace with \\t and \\b
+This one is a bit tricky as the OS of mac takes care of the backspace tab, 
+from research online I can confirm that this solution is valid, and that if 
+this file needed to read a text file with backspaces then they would be replaced.
+
+Just like the previous answers we check each char in the text for three possible
+answers, tab/backspace/forwardslash, and if we find them we replace them with 
+their actual char representation. A tricky thing to note is that this means we 
+must putchar the \ followed by the b/t// to show the user the replacement. 
+
+## 1.11 Testing for the word count program 
+In order to properly assess this bare bones file, we would need to find scenarious, 
+where the newline character would not be read correctly. One idea for testing would 
+be to read a Hello\nworld in text to see if it would be counted or not, another 
+possible test case would be to see if multiple blank new lines are handled correctly.
+
+## 1.12 Write a program that prints its input one word per line
+This was quite a simple program, given that the only time we need to go down is,
+when there is a " ", an tab, or a new line, we can use a if else chain to make 
+it such that if we find those three breaks between words then we print a blank 
+line, and else we print the char.
