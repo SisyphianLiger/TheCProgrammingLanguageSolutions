@@ -113,3 +113,35 @@ This was quite a simple program, given that the only time we need to go down is,
 when there is a " ", an tab, or a new line, we can use a if else chain to make 
 it such that if we find those three breaks between words then we print a blank 
 line, and else we print the char.
+
+## 1.13 Write a program to print a histogram from the char word input length 
+For this problem I wanted to make try to make an inverted histogram, i.e. a 
+vertical graph. It took a bit of time to figure out, and it was definitely a 
+write it down on paper solution. 
+
+Putiing it down on paper I could see that I could simply flip the first for loop, 
+and with that use the for loops value to compare to the element and check if the 
+element in the array is less than or equal to the I value. We print * if this 
+logic is met and otherwise we print ' '
+
+## 1.14 Write a program to print a histogram for all printable char frequencies
+Here I just decided to make the histogram horizontal both to do it the other way, 
+but also just to see how it would look. Now, the prompt says to print a histogram 
+of all frequencies, but if I am honest, that is a bit difficult presenting it, 
+to human readable formats in you shell. 
+
+So I took the following idea into consideration, we should find printable chars, 
+if we do, we can store them in an array, we know for example that there are 95 
+characters in total, and that there is an integer representation of the 
+chars, in question. Thus, for any char not in the range of we ignore it, then to 
+add the sequence of chars in order I create a symbolic constant that subtracts,
+the difference of the char to it's index, i.e. if char == 32, 32 - 32 == 0, add 
+increment the char at arr[c - ASCIISTART]++.
+
+The final step is to again print out the array, accounting for a difference in 
+the x access of + 2,  where 0 displays the char and 1 displays a seperator. 
+
+The result is a histogram that counts all instances of printable chars to the 
+terminal.
+
+## 1.15
