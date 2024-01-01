@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-#define PRINTABLECHAR 95
+#define PRINTABLECHAR 94
 #define ASCIISTART 32
 
 int main () {
@@ -33,10 +33,10 @@ int main () {
         printf("%i ", printablechars[y]);
     
 
-    for (int y = 0; y < PRINTABLECHAR + 1; y++) {
+    for (int y = 0; y < PRINTABLECHAR; y++) {
         for (int x = 0; x < PRINTABLECHAR + 2; x++) {
             if (x == 0) {
-                printf("%c", ASCIISTART + y);
+                printf("%c", ASCIISTART + y + 1);
                 continue;
             }
             if (x == 1) {
