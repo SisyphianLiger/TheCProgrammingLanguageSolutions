@@ -144,4 +144,35 @@ the x access of + 2,  where 0 displays the char and 1 displays a seperator.
 The result is a histogram that counts all instances of printable chars to the 
 terminal.
 
-## 1.15
+## 1.15 Rewrite the temperature conversion program in section 1.2 with a function 
+This was relatively simple, if you know how functions work. Given it did not 
+specifiy to put the function in a different file the solution was to take, 
+the original function allow for parameters to be accepted, i.e. start, stop, limit, 
+and calculate the values. Given this is a sys call, and there is no return value, 
+the function has the type void signifying no expression return. 
+
+## 1.16 Revise the main routine of longest ine to print as much of the possible text
+Ok, this was relatively difficult, and testing this code leads to a bus error, 
+after multiple inputs from the solutions on KnR. But at least, the logic is as 
+followed. We need to modify the getline char line such that it does not cause 
+a buffer overflow. To do this when adding the char to the maxvalue, we set a 
+limit point equal to i < limit - 2, where we reserve 2 slots, one for the 
+new line character and one for the null terminator...
+
+So, you can just check the book solutions for this code, but I just want to be 
+honest here and say I did not get what the prompt wanted us to do, and did not 
+realize we could modify any of the functions, (sounded like we could only 
+modify the main loop...so great to know! But probably not the best assignment.
+
+## 1.17 Write a Program to print all input lines that are longer than 80 chars
+This program was quite simple. From the example, with some modifications I was 
+able to use the len of get line to check if the length of incoming input was 
+greater than 80 (in my case 20 because 80 is a lot of chars). If there was
+update it printed out the current max, then at the end of the program, it 
+prints out the total max and it's string output!
+
+## 1.18 Write a program removing trailing blanks and tabs from each line of 
+##      input, and delete entirely blank lines 
+
+## 1.19 Write a function reverse(s) that reverses the character string s. Use it to
+##      write a program that reverses its input a line at a time.
