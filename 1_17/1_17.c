@@ -22,7 +22,7 @@ int main () {
         if( len > max && len > MINMUM) {
             max = len;
             copy(output, input);
-            printf("Current Max %d, output: %s\n", max, input);
+            printf("Current Max %d, output: %s\n", max, output);
         } 
     }
 

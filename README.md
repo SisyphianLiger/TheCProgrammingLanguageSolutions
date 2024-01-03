@@ -171,8 +171,18 @@ greater than 80 (in my case 20 because 80 is a lot of chars). If there was
 update it printed out the current max, then at the end of the program, it 
 prints out the total max and it's string output!
 
-## 1.18 Write a program removing trailing blanks and tabs from each line of 
-##      input, and delete entirely blank lines 
+## 1.18 Write a program removing trailing blanks and tabs from each line of input, and delete entirely blank lines 
+This one is a bit tricker but here is how I tackled the problem. Again using 
+the copy and getline functions I did the following. 
 
-## 1.19 Write a function reverse(s) that reverses the character string s. Use it to
-##      write a program that reverses its input a line at a time.
+For blank lines, which have len == 1 (because '\n'), we skip those.
+
+For tabs, in the iteration, similar to 1.16, we can make sure that so long as
+we add the j variable and not the iteration through the input, we can avoid tabs 
+with a != '\t'
+
+Lastly, we make sure to set the limit when i breaks to 3, this time, and check 
+if there is a trailing whitespace, if so we increment j and go onto the next checks
+where we add the '\n' and '\0' operator.
+
+## 1.19 Write a function reverse(s) that reverses the character string s. Use it to write a program that reverses its input a line at a time.
