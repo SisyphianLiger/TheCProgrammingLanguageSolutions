@@ -186,3 +186,10 @@ if there is a trailing whitespace, if so we increment j and go onto the next che
 where we add the '\n' and '\0' operator.
 
 ## 1.19 Write a function reverse(s) that reverses the character string s. Use it to write a program that reverses its input a line at a time.
+This one took me a bit of time because well...it is always important to remember, 
+that just because you have a buffer...it does not mean all the array data is 
+initialized.....so yea, in this section we use len given from the function,
+get line, which can then be used with a clever indexing of i,j, to actually 
+reverse a string. Pretty nifty if ya ask me!
+
+
