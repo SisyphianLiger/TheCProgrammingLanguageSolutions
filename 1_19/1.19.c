@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAXLINE 4
+#define MAXLINE 1000
 #define END     0
 
 /*
@@ -18,7 +18,7 @@ int main () {
     while ((len = get_line(input, MAXLINE)) > END) {
         
 
-        revcopy(output, input, MAXLINE); 
+        revcopy(output, input, len); 
         printf("%s\n",output);
     }
 
@@ -44,14 +44,14 @@ int get_line(char s[], int lim)
 }
 
 void revcopy (char to[], char from[], int length){
-    
+
     int i, j;
-    j = length;
-    for (i = 0; i < length; i++) {
-        to[j] = from[i]; 
-        --j;
-        printf("to[j]: %c at j is: %i \n", to[j], j);
-    }
-   
-    to[j] = '\0';
+
+    i = length - 1;
+    j = 0;
+    while (i >= 0) {
+        to[j] = from[i];
+        --i;
+        ++j;
+    }    
 }
