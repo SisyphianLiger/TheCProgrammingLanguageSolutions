@@ -192,4 +192,20 @@ initialized.....so yea, in this section we use len given from the function,
 get line, which can then be used with a clever indexing of i,j, to actually 
 reverse a string. Pretty nifty if ya ask me!
 
+## 1.20 Write a detab funciton!
+Here when we find a tab say Hello\tWorld we want to make sure that we replace, 
+the tabs with spaces. pretty simple, and can be done by modifying the get_line()
+function to have a while loop that increments up to a tab stop. I used a symbolic,
+parameter, as the program is designed to have a general N, and now the user 
+simply can change the symbolic parameter to change the tab stop point.
 
+## 1.21 Write a entab function!
+Here we use the spacing of tab stop to when we detect a space, be able to input 
+either a tab for up to the tab stop, or spaces up into the tab stop. This program  
+is not gerealizable givent the assignment states to use the same n veriable from 
+1.20. But with some modulus tricks, you could in theory fill up any like of tabs
+and spaces up to an arbitrary tab stop. We should always give preference to tabs 
+when we can as they contain 4 spaces, whereas spaces should be used to fill the 
+remainder of the spaced neede to be filled. 
+
+## 1.22 Write a program to fold long input lines into two two or more short lines 
