@@ -209,3 +209,17 @@ when we can as they contain 4 spaces, whereas spaces should be used to fill the
 remainder of the spaced neede to be filled. 
 
 ## 1.22 Write a program to fold long input lines into two two or more short lines 
+(REVERT) This problem is quite tricky and the solution I have in my head unfortunaetly
+will not work exactly like i need it to. So I am skipping it for now. As it stands, 
+long line inputs will just be printed in there entirety. 
+
+The idea I have for them in the future is to split them by the max n column length. 
+This will take some tinkering to do, and I need to read more of the chapters. 
+
+Couple of attempts, when you find a line that has no spaces you break that line 
+with a '\n' and then shift everything to the right...this could be the solution,
+but didn't work in my implementation. 
+
+
+## 1.23 Write a program to remove all comments in a C file. 
+
