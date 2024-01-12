@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 #define MAXLINE 100     /* size of buffer for strings */
 #define END 0           /* If there is a newline with no input */
 #define TABN 4          /* How big \t should be */
