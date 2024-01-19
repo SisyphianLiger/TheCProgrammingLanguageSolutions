@@ -54,7 +54,15 @@ and with an or gate add it's bits to x.
 # Excercise 2-7
 Write a funciton invert(x,p,n) that returns x with the n bits that being at position p
 inverted(i.e. changed into 0 and vice versa), leaving the others unchanged.
+Taking the mask from 2-6 we can than use an xor on x to invert the range of bits 
+we need.
 
 # Excercise 2-8 
 Write a function rightrot(x,n) that returns the value of the integer x rotated 
 to the right by n bit positions.
+
+Super simple, but there could be some flipping errors to watch out for, basically,
+all we need here is a x >> n. But n could be greater than x so checking for that 
+in production code may prevent bugs.
+
+
