@@ -65,4 +65,25 @@ Super simple, but there could be some flipping errors to watch out for, basicall
 all we need here is a x >> n. But n could be greater than x so checking for that 
 in production code may prevent bugs.
 
+# Excercise 2-9
+In a two's complement number system, x &= (x-1) deletes the rightmost bit in x.
+Explain why, Use this observation to write a faster version of bitcount.
+
+x = x & (x-1)
+
+This is some clever bitshifting to allow me to explain.
+Imagine we take 8 as a variable:                1000
+If we when take the next lowest number: 7       0111
+
+
+And then Mask the two together the result is 0. This would mean that the needed, 
+bits we need to represent 8 is 1. The reason this is faster than bitcount, is 
+because given the same example. bitcount will have to stil check for is after a 
+bitshift there is a one all the way to the end. Whereas with bit masking we 
+escape checking 3 more times. 
+
+# Exercise 2-10
+Rewrite the function lower, which converts upper case letters to lowercase, with 
+a conditional expression instead of if-else.
+
 
