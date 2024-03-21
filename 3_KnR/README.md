@@ -37,3 +37,5 @@ two value ranges needed to expand the characters.
 All in all this was for me a difficult problem, but really expanded my knowledge 
 of strings in C, and char * arrays. I will probably refactor the code, and this 
 is not safe code by any means but was fun onto 3.4
+
+# 3-4
