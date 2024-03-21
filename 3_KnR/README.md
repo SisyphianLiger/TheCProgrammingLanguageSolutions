@@ -19,3 +19,21 @@ tabs and newlines, we must first copy all incoming text to s[]. Then, make a cop
 that handles '\n' and '\t' characters properly. Also I was today years old when 
 I realized that a postfix operator allows for a read on variable before writing...
 so yea...that was nice!
+
+
+# 3-3
+This problem is a bit janky, mainly because in theory s2 should be some random,
+char array with a buffer...but I wanted to do it hard mode so I seperatated out 
+the two functions into the finding the length needed from s1, and then expanding 
+it. Reading the code it seems a tad redundant, and this is true, but the goal for
+me was because I didn't have access to the heap I did not want to use it. 
+
+Thus I get the length of s2 and use it to make a buffer that would fit exactly.
+In order to keep track of the 0-9A-Za-z combinaitons, I put the char integer 
+equivalents in an array, which in my case is then sorted. A hash map would probably
+be the most ideal for this problem with K,V pair of K == first spot, and V == the 
+two value ranges needed to expand the characters. 
+
+All in all this was for me a difficult problem, but really expanded my knowledge 
+of strings in C, and char * arrays. I will probably refactor the code, and this 
+is not safe code by any means but was fun onto 3.4
