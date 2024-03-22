@@ -39,3 +39,10 @@ of strings in C, and char * arrays. I will probably refactor the code, and this
 is not safe code by any means but was fun onto 3.4
 
 # 3-4
+The problem with this code is that when processing INT_MIN, the two's complement 
+of INT_MIN does not have a positive equivalent. In order to solve this problem,
+we can use the abs() function from the stdlib.h to make sure that when we use 
+the modulus operator in our do portion of the do-while loop, that we are taking 
+the positive value digit. The negation is presevered with the sign variable, and 
+added at the end of the char array. Because we are adding numbers in reverse we 
+must finally rerverse the string at the end of the function call. 
