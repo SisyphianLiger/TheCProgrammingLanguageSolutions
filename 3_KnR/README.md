@@ -46,3 +46,12 @@ the modulus operator in our do portion of the do-while loop, that we are taking
 the positive value digit. The negation is presevered with the sign variable, and 
 added at the end of the char array. Because we are adding numbers in reverse we 
 must finally rerverse the string at the end of the function call. 
+
+# 3-5 
+This problem is a bit of an expansion of 3-4 now that we have a way to guarentee 
+that there is no conflict with the two's complement. Given we have three route,
+Binary, Octal and Hexidecimal, we need to take an integer, and divide them by 
+there respective base cases, 2, 8, 16, and while doing so we take the absolute 
+value of the number. That will leave us with an char array that once reversed
+is the correct notation. Only binary has to have a negative number added to it.
+Hexidecimal and Octal already represent there negative sign within their system.
