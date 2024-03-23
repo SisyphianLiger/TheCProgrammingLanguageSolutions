@@ -129,22 +129,6 @@ void hexadecimal_converter(int n, char s[]){
 }
 
 
-void itoa(int n, char s[]) {
-    int i, sign; 
-
-    sign = n;
-    i = 0;
-    do {
-        s[i++] = abs(n % 10) + '0';                      /* Get Next Digit */
-    } while (n /= 10);                                   /* delete it */
-        
-    if (sign < 0) 
-        s[i++] = '-'; 
-    
-    s[i] = '\0';
-    reverse(s);
-
-}
 
 void reverse(char s[]) {
     int c, i, j;

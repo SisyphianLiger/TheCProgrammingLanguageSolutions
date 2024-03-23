@@ -55,3 +55,9 @@ there respective base cases, 2, 8, 16, and while doing so we take the absolute
 value of the number. That will leave us with an char array that once reversed
 is the correct notation. Only binary has to have a negative number added to it.
 Hexidecimal and Octal already represent there negative sign within their system.
+
+# 3_6
+This is a rather simple addon to do, basically keep track of the integers coming
+into the char array, for each integer decrement the width...then when the 
+computation is done, simple add a '0' until width gets to 0. And yea...that is
+pretty much it!
